@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 
  using namespace std;
 
@@ -26,6 +27,11 @@ struct stGameResults
 	string WinnerName = "";
 };
 
+void PlayClickSound()
+{
+    Beep(1200, 40);
+}
+
 short ReadHowManyRounds()
 {
 	short GameRounds = 1;
@@ -34,6 +40,7 @@ short ReadHowManyRounds()
 	{
 		cout << "How Many Rounds 1 to 10? \n";
 		cin >> GameRounds;
+		PlayClickSound();
 
 	} while (GameRounds < 1 || GameRounds > 10);
 
@@ -48,6 +55,7 @@ enGameChoice ReadPlayer1Choice()
 	{
 		cout << "\nYour Choice: [1]:Stone, [2]:Paper, [3]:Scissors ? ";
 		cin >> Choice;
+		PlayClickSound();
 
 	} while (Choice < 1 || Choice > 3);
 
@@ -114,21 +122,44 @@ string ChoiceName(enGameChoice Choice)
 	return arrNameChoice[Choice - 1];
 }
 
+void PlayWinSound()
+{
+    Beep(900, 120);
+    Beep(1100, 120);
+    Beep(1300, 120);
+    Beep(1600, 250);
+}
+
+void PlayLoseSound()
+{
+    Beep(800, 150);
+    Beep(600, 150);
+    Beep(400, 400);
+}
+
+void PlayDrawSound()
+{
+    Beep(750, 200);
+    Beep(750, 200);
+}
+
 void SetWinnerScreenColor(enWinner Winner)
 {
 	switch (Winner)
 	{
 	case enWinner::Player1:
 		system("color 2F"); //true screen to Green
+		PlayWinSound();
 		break;
 
 	case enWinner::Computer:
 		system("color 4F"); //true screen to Red
-		cout << "\a";
+		PlayLoseSound();
 		break;
 
 	default:
 		system("color 6F"); //true screen to Yello
+		PlayDrawSound();
 		break;
 	}
 }
@@ -247,6 +278,7 @@ void StartGame()
 
 		cout << endl << Tabs(2) << "Do you want to play again? Y/N? ";
 		cin >> PlayAgain;
+		PlayClickSound();
 
 	} while (PlayAgain == 'Y' || PlayAgain == 'y');
 }
