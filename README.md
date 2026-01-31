@@ -1,36 +1,77 @@
-# Stone Paper Scissors Game (C++)
+# 🎮 Stone, Paper & Scissors Game (C++)
 
-A simple console-based Stone Paper Scissors game implemented in C++.
+A console-based **Stone, Paper & Scissors** game built with C++ where the player competes against the computer through multiple rounds with interactive feedback.
 
-## About the Project
-This project is a small console game where the player plays against the computer.
-The player chooses Stone, Paper, or Scissors, while the computer generates a random choice.
-Each round has a clear winner, and after finishing all rounds, the final game results are displayed.
+---
 
-The project was created as part of practicing C++ fundamentals and applying clean code principles.
+## 📌 Project Overview
 
-## Game Features
-- Player vs Computer gameplay
-- Random computer choice generation
-- Multiple rounds (from 1 to 10)
-- Clear round-by-round results
-- Final game summary
-- Console color changes based on the winner
-- Option to replay the game
+The project focuses on building a clean and structured game logic while enhancing the console user experience using sounds, colors, and clear result summaries.
 
-## Project Structure
-The project is intentionally kept simple and clean.
+---
 
-## What I Learned
-While working on this project, I practiced and learned:
-- Using functions to organize code and separate responsibilities
-- Applying clean code concepts to make the logic clearer and easier to read
-- Working with enums to represent choices and game results
-- Using structs to store round and game information
-- Generating random values for computer decisions
-- Handling user input and validating it properly
-- Managing game flow across multiple rounds
+## ✨ Key Features
 
-## Notes
-This project focuses on logic, structure, and readability rather than advanced features.
-It was written as a practice project while learning C++ and problem solving.
+- Choose number of rounds (1–10)
+- Random computer decision for fair gameplay
+- Round-by-round result display
+- Final game statistics and overall winner
+- Sound effects for win, lose, and draw
+- Dynamic console color changes
+- Replay option without restarting the program
+
+---
+
+## 🧠 Key Challenges & How They Were Solved
+
+- **Managing multiple rounds and results**  
+  → Solved by designing structured data models using enums and structs.
+
+- **Winner decision logic**  
+  → Implemented clear and maintainable game rules using switch-case logic.
+
+- **Improving console user experience**  
+  → Added sound effects and color feedback to make the game more engaging.
+
+---
+
+## 📊 Business-Oriented Output
+
+- Provides an interactive and enjoyable console game experience.
+- Demonstrates strong fundamentals in C++ and game logic design.
+- Shows ability to build structured, reusable, and extendable software components.
+
+---
+
+## 🛠️ Technologies & Concepts Used
+
+- C++
+- Procedural Programming
+- Enums & Structs
+- Control Flow (Loops & Switch)
+- Random Number Generation
+- Console UI Handling
+- Game State Management
+
+---
+
+## ▶️ How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+
+
+## ▶️ How to Run the Game
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+
+2. Compile the project using any C++ compiler (e.g. g++):
+    g++ main.cpp -o game
+
+3. Run the executable:
+    ./game
+
+⚠️ Note: This project uses Windows-specific functions (windows.h) for sound and color effects.
