@@ -55,13 +55,6 @@ The project focuses on building a clean and structured game logic while enhancin
 
 ---
 
-## ▶️ How to Run
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-
-
 ## ▶️ How to Run the Game
 
 1. Clone the repository:
